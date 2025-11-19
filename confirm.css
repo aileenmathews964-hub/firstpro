@@ -1,0 +1,114 @@
+body {
+    /* Sets a clean, standard background and centers the content vertically and horizontally */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --------------------------------- */
+/* --- POP-UP ANIMATION KEYFRAMES --- */
+/* --------------------------------- */
+@keyframes pop-in {
+    0% {
+        opacity: 0; /* Start completely invisible */
+        transform: scale(0.8); /* Start smaller than final size */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Styles the main container div */
+div {
+    background-color: #ffffff;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(158, 6, 6, 0.712);
+    text-align: center;
+    max-width: 90%;
+    
+    /* --- APPLY THE POP-IN ANIMATION --- */
+    animation: pop-in 0.9s ease-out forwards; /* 0.5s duration, smooth end, keeps final state */
+}
+
+/* ---------------------------------- */
+/* --- HEADING ANIMATION (Previous) --- */
+/* ---------------------------------- */
+@keyframes success-pulse {
+    0% {
+        color: #a54caf;
+    }
+    50% {
+        color: #6669bb;
+    }
+    100% {
+        color: #4cafad;
+    }
+}
+
+/* Styles the main heading */
+h1 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 10px;
+    transition: color 1s ease-in-out, border-color 1s ease-in-out;
+    animation: success-pulse 3s infinite alternate;
+}
+
+
+/* Styles the button container */
+button {
+    background-color: #5c67f2;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #4a54e6;
+    transform: translateY(-2px);
+}
+
+/* Styles the anchor tag (link) inside the button */
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+}
+.fnl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #5c67f2;
+    padding:10px;
+    border-radius: 0 0 10px 15px;
+    margin-top: 30px;
+}
+span{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px
+}
+img{
+    animation-name: rot;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rot{
+    0%{transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
